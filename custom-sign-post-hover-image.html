@@ -55,11 +55,28 @@
             width: 33.33%;
         }
 
+        .d-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .d-flex-column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
         .d-flex-justify {
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
+        }
+
+        .m-auto {
+            margin: auto;
         }
 
 
@@ -103,6 +120,10 @@
 
         .border {
             border: 1px solid white;
+        }
+
+        .border-b {
+            border: 1px solid black;
         }
 
         .secondary-btn {
@@ -261,6 +282,50 @@
             position: absolute;
             bottom: 0;
             border-radius: 30% 30% 0 0;
+        }
+
+        /* Fourth Section */
+
+        .card-section .card-wrapper .image-card {
+            width: 100%;
+            height: 50%;
+            background: rgb(254, 254, 254);
+            position: relative;
+            overflow: hidden;
+            transition: 0.8s;
+            /* border: 1px solid black; */
+        }
+
+          .card-section .card-wrapper .image-card{
+            background: black;
+          }
+
+        .card-section .card-wrapper .image-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 0px solid black;
+            transition: 0.8s;
+        }
+
+        .card-section .card-wrapper:hover .image-card img {
+            border: 3px solid black;
+        }
+
+
+        .card-section .card-wrapper .details-image {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: -80%;
+            background: rgb(20, 20, 20);
+            transition: 0.8s;
+
+        }
+
+        .card-section .card-wrapper:hover .details-image {
+            bottom: 0%;
         }
     </style>
 </head>
@@ -430,6 +495,60 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Fourth Section -->
+    <section class="card-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-wrapper border-b ">
+                        <div class="image-card d-flex">
+                            <img src="./images/the-groot.jpg" alt="spiderman">
+                        </div>
+
+                        <div class="details-image d-flex-column ">
+                            <h2>The Groot</h2>
+                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, accusantium.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-4">
+                    <div class="card-wrapper border-b  ">
+                        <div class="image-card d-flex">
+                            <img src="./images/batman.jpg" alt="batman">
+                        </div>
+                
+                        <div class="details-image d-flex-column ">
+                            <h2>Batman</h2>
+                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, accusantium.</p>
+                
+                        </div>
+                
+                    </div>
+                </div>
+
+
+                <div class="col-4">
+                    <div class="card-wrapper border-b ">
+                        <div class="image-card d-flex">
+                            <img src="./images/deadpool.jpg" alt="deadpool">
+                        </div>
+                
+                        <div class="details-image d-flex-column ">
+                            <h2>Deadpool</h2>
+                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, accusantium.</p>
+                
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+    </section>
 </body>
 
 </html>

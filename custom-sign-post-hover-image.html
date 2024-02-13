@@ -13,6 +13,26 @@
             font-family: "Times New Roman", Times, serif;
         }
 
+        .f-black {
+            color: black;
+        }
+
+        .bg-black {
+            background: black;
+        }
+
+        .bg-white {
+            background: white;
+        }
+
+        .pb-5 {
+            padding-bottom: 5px;
+        }
+
+        .pt-20 {
+            padding-top: 20px;
+        }
+
         .container {
             width: 80%;
             margin: auto;
@@ -26,10 +46,32 @@
             width: 33.33%;
         }
 
+        .d-flex-justify {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+
         h2 {
             color: white;
             font-size: 25px;
             padding-bottom: 20px;
+        }
+
+        h4 {
+            color: white;
+            font-size: 14px;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
         }
 
         p {
@@ -46,11 +88,22 @@
 
         }
 
+        .secondary-btn {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: rgb(249, 249, 249);
+            background: rgb(8, 8, 8);
+            border-radius: 20px;
+        }
+
+        .f-w-400 {
+            font-weight: 400;
+        }
+
         /* Card Section */
 
         .card-section {
             height: 100vh;
-            background: black;
             display: flex;
             align-items: center;
         }
@@ -94,11 +147,46 @@
         .card-wrapper:hover .card-discription {
             bottom: 4%;
         }
+
+        /* Second Section on hover call all details will be apper on the card */
+
+        .card-section .card-wrapper .card-image-second {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-section .card-wrapper .card-details-second {
+            position: absolute;
+            bottom: 0%;
+            padding: 20px;
+            transition: 2s;
+            background: white;
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid black; */
+            bottom: -50%;
+
+
+        }
+
+        .card-section .card-wrapper:hover .card-details-second {
+            height: 100%;
+            bottom: 0;
+            border: 1px solid black;
+        }
+
+        .card-section .card-wrapper .card-details-second hr {
+
+            width: 100px;
+
+        }
+
+        /* Third Section */
     </style>
 </head>
 
 <body>
-    <section class="card-section">
+    <section class="card-section bg-black">
         <div class="container">
             <div class="row">
                 <div class="col-4">
@@ -141,6 +229,78 @@
             </div>
         </div>
     </section>
+
+    <!-- On hover card all details will be apper on the card -->
+
+    <section class="card-section bg-white">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-wrapper">
+                        <div class="card-image-second">
+                            <img src="./images/new-york.jpg" alt="new-york">
+                        </div>
+                        <div class="card-details-second d-flex-justify bg-white">
+                            <h2 class="pb-10 f-black">NEW YORK CITY</h2>
+                            <h4 class="f-black pb-5 f-w-400">November 4</h4>
+                            <hr>
+                            <p class="f-black pt-20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptatibus perspiciatis distinctio tempora. Aliquid, autem dicta ea cum aut molestias
+                                odit?</p>
+                            <a href="#" class="f-black secondary-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card-wrapper">
+                        <div class="card-image-second">
+                            <img src="./images/chicago.jpg" alt="chicago">
+                        </div>
+                        <div class="card-details-second d-flex-justify bg-white">
+                            <h2 class="pb-10 f-black">Chicago</h2>
+                            <h4 class="f-black pb-5 f-w-400">May 4</h4>
+                            <hr>
+                            <p class="f-black pt-20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptatibus perspiciatis distinctio tempora. Aliquid, autem dicta ea cum aut molestias
+                                odit?</p>
+                            <a href="#" class="f-black secondary-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card-wrapper">
+                        <div class="card-image-second">
+                            <img src="./images/new-jursy.jpg" alt="new jersey">
+                        </div>
+                        <div class="card-details-second d-flex-justify bg-white">
+                            <h2 class="pb-10 f-black">New Jersey</h2>
+                            <h4 class="f-black pb-5 f-w-400">March 4</h4>
+                            <hr>
+                            <p class="f-black pt-20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptatibus perspiciatis distinctio tempora. Aliquid, autem dicta ea cum aut molestias
+                                odit?</p>
+                            <a href="#" class="f-black secondary-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Third Section -->
+    <section class="card-section bg-black">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>

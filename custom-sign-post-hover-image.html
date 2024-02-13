@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Hover Slide Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        h2 {
+            color: white;
+            font-size: 25px;
+            padding-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            padding-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: black;
+            background: white;
+            border-radius: 20px;
+
+        }
+
+        /* Card Section */
+
+        .card-section {
+            height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Card Wrapper */
+
+        .card-wrapper {
+            position: relative;
+            height: 500px;
+            width: 300px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .card-wrapper .card-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -5%;
+            transition: 0.8s;
+        }
+
+        .card-wrapper:hover .card-image {
+            top: 5%;
+        }
+
+        .card-wrapper .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .card-wrapper .card-discription {
+            position: absolute;
+            bottom: -40%;
+            left: 10%;
+            transition: 0.8s;
+        }
+
+        .card-wrapper:hover .card-discription {
+            bottom: 4%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="card-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-wrapper">
+                        <div class="card-image">
+                            <img src="./images/mountain.jpg" alt="mountain">
+                        </div>
+                        <div class="card-discription">
+                            <h2>Mountain</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quasi.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-wrapper">
+                        <div class="card-image">
+                            <img src="./images/protester.jpg" alt="protester">
+                        </div>
+                        <div class="card-discription">
+                            <h2>Protester</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quasi.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-wrapper">
+                        <div class="card-image">
+                            <img src="./images/road.jpg" alt="road">
+                        </div>
+                        <div class="card-discription">
+                            <h2>Road</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quasi.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

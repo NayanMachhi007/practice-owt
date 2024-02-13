@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover Slide Image Using Position</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        .container-fluid {
+            width: 100%;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .txt-center {
+            text-align: center;
+        }
+
+        .d-flex {
+            display: flex;
+
+        }
+
+        .pt-10 {
+            padding: 10px;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 5px;
+        }
+
+        h1 {
+            font-size: 45px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #00203FFF;
+        }
+
+        h3 {
+            color: #400061;
+
+        }
+
+        h4 {
+            font-size: 14px;
+            color: #400061;
+        }
+
+        i {
+            color: #400061;
+        }
+
+        h2 {
+            color: #400061;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            /* color: #ADEFD1FF; */
+            color: #400061;
+
+        }
+
+        .board-of-director .bod-iteam {
+            position: relative;
+            background-color: rgb(248, 252, 252);
+            height: 300px;
+            width: 300px;
+            margin: 80px 0;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .board-of-director .bod-iteam .bod-image {
+            position: absolute;
+            top: 0;
+            left: 0%;
+            transition: 0.9s;
+            overflow: hidden;
+        }
+
+        .board-of-director .bod-iteam:hover .bod-image {
+            left: -80%;
+        }
+
+
+        .board-of-director .bod-iteam .bod-details {
+            position: absolute;
+            top: 40%;
+            right: -80%;
+            transition: 0.9s;
+        }
+
+        .board-of-director .bod-iteam:hover .bod-details {
+            position: absolute;
+            right: 5%;
+        }
+
+        .board-of-director .bod-iteam .bod-details ul li .fa-brandsi {
+            background: #400061;
+        }
+
+        .board-of-director .bod-iteam .bod-details h3 {
+            font-size: 14px;
+
+        }
+
+
+
+
+
+        /*  */
+
+        .bod-detail-main {
+            background: beige;
+            height: 100vh;
+            padding: 50px 0;
+            display: flex;
+
+        }
+
+        .bod-detail-main .bod-iteam-temp {
+            position: relative;
+            /* background: #400061; */
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            /* border: 1px solid black; */
+            background: azure;
+
+
+        }
+
+        .bod-detail-main .bod-iteam-temp:hover{
+            padding:20px 0;
+        }
+
+     
+
+        .bod-detail-main .bod-iteam-temp .bod-img img {
+
+            /* position: absolute; */
+
+            width: 300px;
+            border-radius: 50%;
+            transition: 0.9s;
+            mix-blend-mode: multiply;
+
+
+        }
+
+        .bod-detail-main .bod-iteam-temp .bod-det {
+            position: absolute;
+            opacity: 0;
+            top:100%;
+            right: 33%;
+            transition: 0.9s;
+
+        }
+
+        .bod-detail-main .bod-iteam-temp:hover .bod-det {
+              top: 58%;
+            right: 33%;
+        }
+
+        .bod-detail-main .bod-iteam-temp .bod-det ul {
+            justify-content: center;
+        }
+
+        .bod-detail-main .bod-iteam-temp .bod-det h2 {
+            /* padding-bottom: 5px; */
+            font-size: 20px;
+        }
+
+        .bod-detail-main .bod-iteam-temp .bod-det ul li {
+            padding: 4px;
+        }
+
+        .bod-detail-main .bod-iteam-temp:hover .bod-det {
+            opacity: 1;
+        }
+
+        .bod-detail-main .bod-iteam-temp:hover img {
+            
+            top: 0%;
+            width: 131px;
+            left: 19%;
+            border: 2px solid #400061;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="board-of-director">
+        <div class="bod-title">
+            <h1 class="txt-center">Board of Director</h1>
+            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, placeat?</p>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 pt-10">
+                    <div class="bod-iteam d-flex">
+
+                        <div class="bod-image">
+                            <img src="./images/chris.jpg" alt="cris">
+                        </div>
+
+
+                        <div class="bod-details">
+                            <h2>Chris</h2>
+                            <h3>Sitecore Developer</h3>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-3  pt-10">
+                    <div class="bod-iteam d-flex">
+                        <div class="bod-image">
+                            <img src="./images/nigel-rich-new.jpg" alt="chris">
+                        </div>
+                        <div class="bod-details">
+                            <h2>Nigel</h2>
+                            <h3>Frontend Developer</h3>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3  pt-10">
+                    <div class="bod-iteam d-flex">
+                        <div class="bod-image">
+                            <img src="./images/guy-gittins.jpg" alt="chris">
+                        </div>
+                        <div class="bod-details">
+                            <h2>Gittins</h2>
+                            <h3>Flutter Developer</h3>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3  pt-10">
+                    <div class="bod-iteam d-flex">
+                        <div class="bod-image">
+                            <img src="./images/rosie-shapland.jpg" alt="chris">
+                        </div>
+                        <div class="bod-details">
+                            <h2>Rosie</h2>
+                            <h3>Drupal Developer</h3>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Card hover on up and block  -->
+
+
+    <section class="bod-detail-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="bod-iteam-temp txt-center">
+                        <div class="bod-img">
+                            <img src="./images/chris.jpg" alt="">
+                        </div>
+
+                        <div class="bod-det">
+                            <h2>Chris</h2>
+                            <h4>Drupal Developer</h4>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="bod-iteam-temp txt-center">
+                        <div class="bod-img">
+                            <img src="./images/nigel-rich-new.jpg" alt="Nigel">
+                        </div>
+
+                        <div class="bod-det">
+                            <h2 class="bod-h2">Nigle</h2>
+                            <h4>Flutter Developer</h4>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-4">
+                    <div class="bod-iteam-temp txt-center">
+                        <div class="bod-img">
+                            <img src="./images/guy-gittins.jpg" alt="Gittin">
+                        </div>
+
+                        <div class="bod-det">
+                            <h2 class="bod-h2">Gittins</h2>
+                            <h4>Sitecore Developer</h4>
+                            <ul class="d-flex">
+                                <li><i class="fa-brands fa-facebook"></i></li>
+                                <li><i class="fa-brands fa-instagram"></i></li>
+                                <li><i class="fa-brands fa-twitter"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

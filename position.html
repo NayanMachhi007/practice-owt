@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            scroll-behavior: smooth;
+
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: purple;
+            width: 100%;
+            position: fixed;
+            top: 0;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            padding: 18px 10px;
+            list-style: none;
+        }
+
+        nav ul li:hover {
+            background-color: aqua;
+
+        }
+
+        nav ul li:hover a {
+            color: brown;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* OVerride */
+        .override {
+            position: sticky;
+            background-color: white;
+            top: 20;
+        }
+
+        /* Home section */
+        .home {
+            height: 100vh;
+            background-color: aquamarine;
+        }
+
+        .home .title {
+            position: sticky;
+            top: 60px;
+        }
+
+        /*About section */
+        .about {
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+
+        .about .title {
+            position: sticky;
+            top: 60px;
+        }
+
+        /* Practice section */
+        .practice {
+            height: 100vh;
+            background-color: blueviolet;
+        }
+
+        .practice .title {
+            position: sticky;
+            top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Practice</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <section class="home">
+        <div class="title">
+            <h1>Home</h1>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="title">
+            <h2>About us</h2>
+        </div>
+    </section>
+
+    <section class="practice">
+        <div class="title">
+            <h2>Practice</h2>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

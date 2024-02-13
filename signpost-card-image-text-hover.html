@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Position on Hover Card Details showing uppers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container-fluid {
+            width: 100%;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+
+        .pt-10 {
+            padding: 10px;
+        }
+
+        .txt-center {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #1995AD;
+        }
+
+        .bg-lightblue {
+            background: lightblue;
+        }
+
+        .bg-lightpink {
+            background: lightpink;
+        }
+
+        .bg-lightpurple {
+            background: rgb(231, 149, 231);
+        }
+
+        .bg-lightskin {
+            background: #F1F1F2;
+
+        }
+
+        /* top-50 */
+
+        .top-50 {
+            position: absolute;
+            height: 100%;
+            top: -100%;
+            left: 50%;
+            opacity: 0.6;
+            background: #d7e111;
+            width: 100%;
+            transition: 0.9s;
+        }
+/* 
+        .bottom-50 {
+             opacity: 0.6;
+            position: absolute;
+            height: 100%;
+            bottom: -50%;
+            background: #1995AD;
+            width: 100%;
+        }
+
+        .left-50 {
+             opacity: 0.6;
+            position: absolute;
+            height: 100%;
+            top: 50%;
+            left: -50%;
+            background: #1995AD;
+            width: 100%;
+        }
+
+        .right-50 {
+             opacity: 0.6;
+            position: absolute;
+            height: 100%;
+            top: 0%;
+            right: -50%;
+            background: #24953a;
+            width: 100%;
+        } */
+
+        .left-50-right-50 {
+            position: absolute;
+            height: 100%;
+            top: 50%;
+            left: -50%;
+            right: -50%;
+            background: #1995AD;
+            width: 100%;
+        }
+
+        /* Card main*/
+
+        .card-main {
+            height: 100vh;
+        }
+
+        /* Card iteam */
+        .card-main .card-iteam {
+            position: relative;
+            overflow: hidden;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* Top to bottom */
+
+        .card-main .card-iteam .card-hover {
+            background: rgb(12, 96, 180);
+            opacity: 0.9;
+            position: absolute;
+            width: 100%;
+            transition: 0.9s;
+            height: 100%;
+            top: 0;
+
+        }
+
+        .card-main .card-iteam:hover .card-hover {
+            top: 100%;
+            opacity: 0.5;
+
+        }
+
+        /* Bottom to top */
+
+        .card-main .card-iteam .bottom-to-top {
+            background: rgb(12, 96, 180);
+            opacity: 0.9;
+            position: absolute;
+            width: 100%;
+            transition: 0.9s;
+            height: 100%;
+            top: 0;
+
+        }
+
+        .card-main .card-iteam:hover .bottom-to-top {
+            top: -100%;
+            opacity: 0.5;
+
+        }
+
+
+        /* left-to-right */
+
+        .card-main .card-iteam .left-to-right {
+            background: rgb(12, 96, 180);
+            opacity: 0.9;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: -100%;
+            top: 0%;
+            transition: 0.9s;
+            opacity: 0.8;
+        }
+
+        .card-main .card-iteam:hover .left-to-right {
+            left: 0%;
+            top: 0%;
+            opacity: 0.5;
+        }
+
+        /* 
+        
+        
+        
+        
+        */
+
+        .card-main .card-iteam .left-to-right-temp {
+            background: rgb(12, 96, 180);
+            opacity: 0;
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            left: -50%;
+            top: 0%;
+            transition: 0.9s;
+            opacity: 0.8;
+        }
+
+        .card-main .card-iteam:hover .left-to-right-temp {
+            left: 0%;
+            top: 0%;
+            right: 0%;
+            opacity: 0.5;
+        }
+
+        /* Right to left */
+
+           .card-main .card-iteam .left-to-right-temp {
+            background: rgb(12, 96, 180);
+            opacity: 0;
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            left: -50%;
+            top: 0%;
+            transition: 0.9s;
+            opacity: 0.8;
+        }
+
+      .card-main .card-iteam:hover  .right-to-left-temp
+      {
+         left: 0%;
+            top: 0%;
+            right: 0%;
+            opacity: 0.5;
+      }
+
+        /* Right to left */
+
+
+        .card-main .card-iteam .right-to-left {
+            background: rgb(12, 96, 180);
+            opacity: 0.9;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            right: -100%;
+            top: 0%;
+            transition: 0.9s;
+            opacity: 0.8;
+        }
+
+
+        .card-main .card-iteam:hover .right-to-left {
+            right: 0%;
+            top: 0%;
+            opacity: 0.5;
+        }
+
+        /*  */
+
+
+
+        .card-main .card-iteam .right-to-left {
+            background: rgb(12, 96, 180);
+            opacity: 0.9;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            right: -100%;
+            top: 0%;
+            transition: 0.9s;
+            opacity: 0.8;
+        }
+
+
+        .card-main .card-iteam:hover .right-to-left {
+            right: 0%;
+            top: 0%;
+            opacity: 0.5;
+        }
+
+        /* 
+         */
+
+
+        .card-main .card-iteam:hover .top-50 {
+            top: -50%;
+            /* background-color: aqua; */
+        }
+
+        .card-main .card-iteam:hover .left-50 {
+            /* top: -50%; */
+        }
+
+        .card-main .card-iteam:hover .bottom-50 {
+            /* top: -50%; */
+        }
+
+        .card-main .card-iteam:hover .right-50 {
+            /* top: -50%; */
+        }
+
+        /* Card Image */
+        .card-main .card-iteam .card-image {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .card-main .card-iteam .card-image img {
+            height: 100%;
+            width: 100%;
+            /* transition: 0.9s; */
+        }
+
+
+        .card-main .card-iteam .card-details {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .card-main .card-iteam .card-details:hover h2 {
+            top: 20%;
+        }
+
+        .card-main .card-iteam .card-details h2 {
+            padding-top: 10px;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top to bottom -->
+    <section class="card-main bg-lightskin">
+        <div class="container-fluid">
+            <h2 class="txt-center">Top to bottom</h2>
+            <div class="row">
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+
+                        <div class="card-image">
+                            <img src="./images/pocket.jpg" alt="pocket">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Pocket</h2>
+                        </div>
+                        <div class="card-hover">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+                        <div class="card-image">
+                            <img src="./images/watch.jpg" alt="watch">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Glasses</h2>
+                        </div>
+
+                        <div class="card-hover">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam">
+                        <div class="card-image">
+                            <img src="./images/spacs.jpg" alt="spacs">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Watch</h2>
+                        </div>
+                        <div class="card-hover">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Botttom to top -->
+
+    <section class="card-main bg-lightskin">
+        <div class="container-fluid">
+            <h2 class="txt-center">bottom to top</h2>
+            <div class="row">
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+
+                        <div class="card-image">
+                            <img src="./images/pocket.jpg" alt="pocket">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Pocket</h2>
+                        </div>
+                        <div class=" bottom-to-top">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+                        <div class="card-image">
+                            <img src="./images/watch.jpg" alt="watch">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Glasses</h2>
+                        </div>
+
+                        <div class="bottom-to-top">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam">
+                        <div class="card-image">
+                            <img src="./images/spacs.jpg" alt="spacs">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Watch</h2>
+                        </div>
+                        <div class="bottom-to-top">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Left to Right -->
+
+    <section class="card-main bg-lightskin">
+        <div class="container-fluid">
+            <h2 class="txt-center">Left to Right</h2>
+            <div class="row">
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+
+                        <div class="card-image">
+                            <img src="./images/pocket.jpg" alt="pocket">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Pocket</h2>
+                        </div>
+                        <div class="left-to-right">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+                        <div class="card-image">
+                            <img src="./images/watch.jpg" alt="watch">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Glasses</h2>
+                        </div>
+
+                        <div class="left-to-right">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam">
+                        <div class="card-image">
+                            <img src="./images/spacs.jpg" alt="spacs">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Watch</h2>
+                        </div>
+                        <div class="left-to-right">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Right to left -->
+
+    <section class="card-main bg-lightskin">
+        <div class="container-fluid">
+            <h2 class="txt-center">Right to left</h2>
+            <div class="row">
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+
+                        <div class="card-image">
+                            <img src="./images/pocket.jpg" alt="pocket">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Pocket</h2>
+                        </div>
+                        <div class="right-to-left">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+                        <div class="card-image">
+                            <img src="./images/watch.jpg" alt="watch">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Glasses</h2>
+                        </div>
+
+                        <div class="right-to-left">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam">
+                        <div class="card-image">
+                            <img src="./images/spacs.jpg" alt="spacs">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Watch</h2>
+                        </div>
+                        <div class="right-to-left">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top left to bottom left -->
+
+    <section class="card-main bg-lightskin">
+        <div class="container-fluid">
+            <h2 class="txt-center">Top left to bottom left</h2>
+            <div class="row">
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+
+                        <div class="card-image">
+                            <img src="./images/pocket.jpg" alt="pocket">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Pocket</h2>
+                        </div>
+                        <div class="left-to-right-temp">
+
+                        </div>
+
+                        <div class="right-to-left-temp">
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam ">
+                        <div class="card-image">
+                            <img src="./images/watch.jpg" alt="watch">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Glasses</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4 pt-10">
+                    <div class="card-iteam">
+                        <div class="card-image">
+                            <img src="./images/spacs.jpg" alt="spacs">
+                        </div>
+                        <div class="card-details">
+                            <h2 class="txt-center">Watch</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

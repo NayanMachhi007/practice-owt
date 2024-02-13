@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navigation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        /* Global style */
+        .bg-black{
+            background-color: black;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .col-11 {
+            width: 91.67%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-7 {
+            width: 58.33;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .h100 {
+            height: 100vh;
+        }
+
+        .contenier {
+            background-color: white;
+            display: flex;
+            justify-content:end;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .txt-center {
+            text-align: center;
+        }
+
+        .primary-h1 {
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        .navigation ul li {
+            padding: 20px 10px;
+        }
+
+
+        .navigation ul li:hover {
+            background-color: azure;
+            border-radius: 10%;
+        }
+
+        .navigation ul li:hover a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="contenier">
+
+        <div class="col-1 bg-black">
+            <div class="navigation h100">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-11">
+            <section id="home" class="home h100 ">
+                <h1 class="primary-h1 txt-center">Home</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repellendus rem sint. Deserunt
+                    culpa,
+                    doloremque quas, aliquam facere iste inventore accusantium quod quo illo, officia ab magni
+                    aspernatur neque itaque.</p>
+            </section>
+            <section id="about" class="about h100">
+                <h1 class="primary-h1 txt-center">About</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repellendus rem sint. Deserunt
+                    culpa,
+                    doloremque quas, aliquam facere iste inventore accusantium quod quo illo, officia ab magni
+                    aspernatur neque itaque.</p>
+            </section>
+            <section id="contact" class="contact h100">
+                <h1 class="primary-h1 txt-center">Contact</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repellendus rem sint. Deserunt
+                    culpa,
+                    doloremque quas, aliquam facere iste inventore accusantium quod quo illo, officia ab magni
+                    aspernatur neque itaque.</p>
+            </section>
+        </div>
+
+    </section>
+</body>
+
+</html>

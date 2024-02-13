@@ -13,8 +13,13 @@
             font-family: "Times New Roman", Times, serif;
         }
 
+
         .f-black {
             color: black;
+        }
+
+        .f-white {
+            color: white;
         }
 
         .bg-black {
@@ -23,6 +28,10 @@
 
         .bg-white {
             background: white;
+        }
+
+        .p-20 {
+            padding: 20px;
         }
 
         .pb-5 {
@@ -54,6 +63,10 @@
         }
 
 
+        .h2-primary-third {
+            color: white;
+            font-size: 25px;
+        }
 
         h2 {
             color: white;
@@ -88,6 +101,10 @@
 
         }
 
+        .border {
+            border: 1px solid white;
+        }
+
         .secondary-btn {
             text-decoration: none;
             padding: 10px 15px;
@@ -116,6 +133,7 @@
             width: 300px;
             overflow: hidden;
             border-radius: 20px;
+
         }
 
         .card-wrapper .card-image {
@@ -182,6 +200,68 @@
         }
 
         /* Third Section */
+
+        .card-section .card-wrapper .title {
+            width: 100%;
+            height: 50%;
+            transition: 0.8s;
+
+        }
+
+        .card-section .card-wrapper:hover .title {
+            position: absolute;
+            border-radius: 0 0 60% 60%;
+        }
+
+        .card-section .card-wrapper .title img {
+            transition: 0.8s;
+        }
+
+        .card-section .card-wrapper:hover .title img {
+            border-radius: 0 0 60% 60%;
+        }
+
+        .card-section .card-wrapper .title .move-bottom {
+            position: absolute;
+            bottom: 5%;
+            transition: 0.8s;
+            left: 0%;
+            color: black;
+            width: 100%;
+        }
+
+        .card-section .card-wrapper .title h2 {
+            position: absolute;
+            bottom: -20%;
+            left: 20%;
+            transition: 0.8s;
+            width: 70%;
+
+        }
+
+        .card-section .card-wrapper:hover .title h2 {
+            bottom: 40%;
+            color: rgb(241, 235, 235);
+
+        }
+
+
+
+        .card-section .card-wrapper:hover .title .move-bottom {
+
+            bottom: -101%;
+            left: 0%;
+            color: white;
+        }
+
+        .card-section .card-wrapper .discrption-third {
+            width: 100%;
+            height: 50%;
+            /* background: aqua; */
+            position: absolute;
+            bottom: 0;
+            border-radius: 30% 30% 0 0;
+        }
     </style>
 </head>
 
@@ -296,7 +376,56 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <div class="card-wrapper">
+                    <div class="card-wrapper border">
+                        <div class="title">
+                            <img src="./images/night-life-11.jpg" alt="Nightlife">
+                            <h2 class="h2-primary-third">Moonlight Lounge</h2>
+                            <p class="f-black p-20 move-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Odit
+                                veritatis dicta perspiciatis corporis quod minus magnam eum, temporibus accusamus illum
+                                explicabo, doloribus perferendis iusto commodi distinctio aspernatur, facilis in sequi!
+                            </p>
+                        </div>
+
+                        <div class="discrption-third">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card-wrapper border">
+                        <div class="title">
+                            <img src="./images/night-club-1.jpg" alt="Nightlife">
+                            <h2 class="h2-primary-third">Starry Nightclub</h2>
+                            <p class="f-black p-20 move-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Odit
+                                veritatis dicta perspiciatis corporis quod minus magnam eum, temporibus accusamus illum
+                                explicabo, doloribus perferendis iusto commodi distinctio aspernatur, facilis in sequi!
+                            </p>
+                        </div>
+
+                        <div class="discrption-third">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card-wrapper border">
+                        <div class="title">
+                            <img src="./images/nightlife-2.jpg" alt="Nightlife">
+                            <h2 class="h2-primary-third">The Midnight Club</h2>
+                            <p class="f-black p-20 move-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Odit
+                                veritatis dicta perspiciatis corporis quod minus magnam eum, temporibus accusamus illum
+                                explicabo, doloribus perferendis iusto commodi distinctio aspernatur, facilis in sequi!
+                            </p>
+                        </div>
+
+                        <div class="discrption-third">
+
+                        </div>
                     </div>
                 </div>
             </div>

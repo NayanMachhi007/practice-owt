@@ -14,6 +14,7 @@
         }
 
 
+
         .f-black {
             color: black;
         }
@@ -40,6 +41,14 @@
 
         .pt-20 {
             padding-top: 20px;
+        }
+
+        .p-10 {
+            padding: 10px;
+        }
+
+        .mt-10 {
+            margin-top: 10px;
         }
 
         .container {
@@ -118,6 +127,33 @@
 
         }
 
+        .border-50 {
+            border: 1px solid #D1B54C;
+            width: 90%;
+            margin: 0px 0px 20px 10px;
+        }
+
+        .border-grey {
+            border: 1px solid grey;
+            width: 100%;
+
+        }
+
+        .border-100 {
+            width: 100%;
+            border: 1px solid grey;
+        }
+
+        .bor-rad-0 {
+            border-radius: 0;
+        }
+
+        .positon-bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
         .border {
             border: 1px solid white;
         }
@@ -132,6 +168,10 @@
             color: rgb(249, 249, 249);
             background: rgb(8, 8, 8);
             border-radius: 20px;
+        }
+
+        table {
+            width: 100%;
         }
 
         .f-w-400 {
@@ -296,9 +336,9 @@
             /* border: 1px solid black; */
         }
 
-          .card-section .card-wrapper .image-card{
+        .card-section .card-wrapper .image-card {
             background: black;
-          }
+        }
 
         .card-section .card-wrapper .image-card img {
             width: 150px;
@@ -326,6 +366,104 @@
 
         .card-section .card-wrapper:hover .details-image {
             bottom: 0%;
+        }
+
+        /* Fifth section */
+
+        /* .card-section .card-wrapper .card-img-back {
+            width: 100%;
+            height: 100%;
+            transition: 0.8s;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .card-section .card-wrapper:hover .card-img-back {
+
+            bottom: 10%;
+        }
+
+        .card-section .card-wrapper .card-center {
+            transform: rotate(45deg);
+            width: 200px;
+            height: 200px;
+            background: #57ccfd;
+            position: absolute;
+            bottom: 62px;
+            z-index: 2;
+            left: 140%;
+            transition: 0.8s;
+            border:20px solid white;
+            opacity: 1;
+            
+        }
+
+        .card-section .card-wrapper:hover .card-center {
+            left: 67%;
+            bottom:30%;
+            opacity: 0.6;
+        }
+
+        .card-section .card-wrapper .card-bottom{
+              transform: rotate(45deg);
+            width: 200px;
+            height: 200px;
+            background: #57ccfd;
+            position: absolute;
+            bottom: 62px;
+            z-index: 3;
+            left: 140%;
+            transition: 0.8s;
+            border:20px solid white;
+            opacity: 1;
+        } */
+
+        /* Sixth section */
+
+        .card-section .card-wrapper .border-card {
+
+            border: 5px solid #D1B54C;
+
+        }
+
+        .card-section .card-wrapper .border-card .border-black-card {
+
+            border-radius: 10px 10px 38px 39px;
+            width: 80%;
+            margin: auto;
+            border: 22px solid #46474B;
+            position: absolute;
+            top: -12px;
+            left: 8%;
+        }
+
+        .card-section .card-wrapper .border-card .border-bottom-black-end {
+            border-radius: 39px 38px 10px 10px;
+            width: 80%;
+            margin: auto;
+            border: 22px solid #46474B;
+            position: absolute;
+            top: -24px;
+            left: 10%;
+        }
+
+        .card-section .card-wrapper .border-card .card-details-border {
+            position: absolute;
+            width: 100%;
+            top: 10%;
+            height: 100%;
+           
+
+        }
+
+        .card-section .card-wrapper .border-card .card-details-border-bottom {
+           
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 272px;
+
         }
     </style>
 </head>
@@ -509,7 +647,8 @@
 
                         <div class="details-image d-flex-column ">
                             <h2>The Groot</h2>
-                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, accusantium.</p>
+                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam,
+                                accusantium.</p>
 
                         </div>
 
@@ -522,13 +661,14 @@
                         <div class="image-card d-flex">
                             <img src="./images/batman.jpg" alt="batman">
                         </div>
-                
+
                         <div class="details-image d-flex-column ">
                             <h2>Batman</h2>
-                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, accusantium.</p>
-                
+                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam,
+                                accusantium.</p>
+
                         </div>
-                
+
                     </div>
                 </div>
 
@@ -538,17 +678,131 @@
                         <div class="image-card d-flex">
                             <img src="./images/deadpool.jpg" alt="deadpool">
                         </div>
-                
+
                         <div class="details-image d-flex-column ">
                             <h2>Deadpool</h2>
-                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, accusantium.</p>
-                
+                            <p class="p-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam,
+                                accusantium.</p>
+
                         </div>
-                
+
                     </div>
                 </div>
             </div>
     </section>
+
+    <!-- Fifth Section -->
+    <!-- <section class="card-section bg-black">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-wrapper border">
+                        <div class="card-img-back">
+                            <img src="./images/lady.jpg" alt="lady">
+                        </div>
+                        <div class="card-center">
+
+                        </div>
+                        <div class="card-bottom">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section> -->
+    <!-- Sixth Section -->
+    <section class="card-section bg-white">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4 m-auto">
+                    <div class="card-wrapper border-b bor-rad-0">
+                        <div class="border-card">
+                            <div class="border-black-card">
+
+                            </div>
+                            <div>
+                                <div class="card-details-border">
+
+                                    <h2 class="f-black p-10">
+                                        About us
+                                    </h2>
+
+                                    <div class="border-50">
+
+                                    </div>
+
+                                    <table class="p-10">
+                                        <tr>
+                                            <td>
+                                                <h4 class="f-black">Company Name :</h4>
+                                            </td>
+
+                                            <td>
+                                                <h5 class="f-w-400">Barodian Market</h5>
+                                            </td>
+
+
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h4 class="f-black">Year Of Est :</h4>
+                                            </td>
+                                            <td>
+                                                <h5 class="f-w-400">2017</h5>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <h4 class="f-black">Location :</h4>
+                                            </td>
+                                            <td>
+                                                <h5 class="f-w-400">Sayajigunj, Vadodara</h5>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="mt-10 border-grey">
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="border-card positon-bottom">
+                                <div class="border-bottom-black-end">
+
+                                </div>
+
+                                <div class="card-details-border-bottom">
+                                    <p class="f-black f-w-400 p-10">Our committed and competent team is here to help keep
+                                        your hair, nails, skin, and body healthy and beautiful. In
+                                        addition to our regular beauty services such as pedicures, manicures, and hair
+                                        services we will continue to perfect our
+                                        skills and keep educated on all the latest styles. Enjoy our wide range of
+                                        services in a cozy and luxurious environment.
+                                        We look forward to serving you! regular beauty services such as pedicures,
+                                        manicures.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
 </body>
 
 </html>

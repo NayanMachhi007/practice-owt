@@ -67,6 +67,29 @@
             width: 33.33%;
         }
 
+        .col-6 {
+            width: 50%;
+        }
+
+        .position-left {
+            position: relative;
+            left: 20%;
+        }
+
+        .large-text {
+            font-size: 45px;
+        }
+
+        .intro-txt {
+            font-size: 25px;
+        }
+
+        .small-intro{
+            font-size: 18px;
+            color: black;
+            font-weight: 600;
+        }
+
         .d-flex {
             display: flex;
             justify-content: center;
@@ -567,6 +590,64 @@
             position: relative;
 
         }
+
+        /* Feature Content */
+        .feature-content {
+            height: 100vh;
+            padding: 100px;
+        }
+
+        .feature-content .feature-image {
+            width: 100%;
+            height: 500px;
+            position: relative;
+
+        }
+
+        .feature-content .feature-image .layer-1 {
+            position: absolute;
+            top: -13%;
+            z-index: 11;
+            left: -27%;
+        }
+
+        .feature-content .feature-image .layer-2 {
+            position: absolute;
+            top: 10%;
+            z-index: 11;
+            left: 20%;
+        }
+
+        .feature-content .feature-image .grey {
+            background: #EFF0F6;
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            z-index: 9;
+        }
+
+        .feature-content .feature-details {
+            padding: 0 10px;
+        }
+        .feature-content .feature-details ul{
+            padding:10px 15px;
+        }
+
+        .feature-content .feature-details ul li{
+            color: #D1B54C;
+            list-style: disc;
+            
+        }
+
+        .feature-content .feature-details a{
+            padding:10px 20px;
+            border:1px solid black;
+            transition: 0.8s;
+        }
+
+        .feature-content .feature-details a:hover{
+            background: #e2e3e9 ;
+        }
     </style>
 </head>
 
@@ -958,13 +1039,14 @@
                                         <i class="fa-solid fa-envelope"></i>
                                     </div>
 
-                                    <a href="#" class="f-black pb-5">barodianmarket@gmail.com</a>
+                                    <a href="#" class="f-black pb-5">loremipsum@gmail.com</a>
                                     <span></span>
                                     <div class="icon">
 
                                         <i class="fa-solid fa-paragraph"></i>
                                     </div>
-                                    <p class="f-black pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                                    <p class="f-black pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Facilis,
                                         commodi.</p>
                                 </div>
                             </div>
@@ -976,6 +1058,46 @@
             </div>
     </section>
 
+
+    <!-- Feature content  -->
+
+    <section class="feature-content ">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="feature-image">
+                        <div class="grey">Naayn</div>
+                        <img class="layer-1" src="./images/sq2.jpg" alt="sq2">
+                        <img class="layer-2" src="./images/sq1.jpg" alt="sq1">
+                    </div>
+                </div>
+                <div class="col-6 position-left">
+                    <div class="feature-details">
+                        <h2 class="f-black large-text">About the show</h2>
+                        <p class="f-black intro-txt f-w-400 pt-20">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Dignissim arcu cursus tincidunt et odio enim aliquam. Gravida
+                            augue arcu duis turpis nisl. Sed tellus quis nisl, est ridiculus. Gravida faucibus in ut
+                            hendrerit. Eget sed sit.
+                        </p>
+                        <ul>
+                            <li>
+                                <p class="f-black small-intro">Created for young entrepreneurs</p>
+                            </li>
+
+                            <li>
+                                <p class="f-black small-intro">New videos every week</p>
+                            </li>
+                            <li>
+                                <p class="f-black small-intro">Interviews with famous guests</p>
+                            </li>
+
+                        </ul>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 

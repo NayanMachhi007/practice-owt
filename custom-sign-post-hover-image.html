@@ -601,6 +601,8 @@
             width: 100%;
             height: 500px;
             position: relative;
+            transition: 0.8s;
+           
 
         }
 
@@ -608,8 +610,13 @@
             position: absolute;
             top: -13%;
             z-index: 11;
-            left: -27%;
+            transition: 0.8s;
+            left: -60%;
             
+        }
+
+        .feature-content:hover .feature-image .layer-1{
+            left:-40%;
         }
 
       
@@ -619,7 +626,12 @@
             top: 10%;
             z-index: 11;
             left: 20%;
+            transition: 0.8s;
            
+        }
+
+        .feature-content:hover .feature-image .layer-2{
+            transform: scale(1.2);
         }
 
 
@@ -654,6 +666,8 @@
         .feature-content .feature-details a:hover{
             background: #e2e3e9 ;
         }
+
+
     </style>
 </head>
 
@@ -1073,28 +1087,30 @@
                 <div class="col-6">
                     <div class="feature-image">
                         <div class="grey">Naayn</div>
-                        <img class="layer-1" src="./images/sq2.jpg" alt="sq2">
-                        <img class="layer-2" src="./images/sq1.jpg" alt="sq1">
+                        <img class="layer-1" src="./images/covid-1.jpg" alt="sq2">
+                        <img class="layer-2" src="./images/covid-2.jpg" alt="sq1">
                     </div>
                 </div>
                 <div class="col-6 position-left">
                     <div class="feature-details">
-                        <h2 class="f-black large-text">About the show</h2>
-                        <p class="f-black intro-txt f-w-400 pt-20">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Dignissim arcu cursus tincidunt et odio enim aliquam. Gravida
-                            augue arcu duis turpis nisl. Sed tellus quis nisl, est ridiculus. Gravida faucibus in ut
-                            hendrerit. Eget sed sit.
+                        <h2 class="f-black large-text">COVID-19</h2>
+                        <p class="f-black intro-txt f-w-400 pt-20">COVID‑19 transmits when infectious particles are breathed in or come into contact with the eyes, nose, or mouth. The
+                        risk is highest when people are in close proximity, but small airborne particles containing the virus can remain
+                        suspended in the air and travel over longer distances, particularly indoors. Transmission can also occur when people
+                        touch their eyes, nose or mouth after touching surfaces or objects that have been contaminated by the virus. People
+                        remain contagious for up to 20 days and can spread the virus even if they do not develop symptoms.
+
                         </p>
                         <ul>
                             <li>
-                                <p class="f-black small-intro">Created for young entrepreneurs</p>
+                                <p class="f-black small-intro">Nomenclature</p>
                             </li>
 
                             <li>
-                                <p class="f-black small-intro">New videos every week</p>
+                                <p class="f-black small-intro">Symptoms and signs</p>
                             </li>
                             <li>
-                                <p class="f-black small-intro">Interviews with famous guests</p>
+                                <p class="f-black small-intro">SARS-CoV-2 variants</p>
                             </li>
 
                         </ul>

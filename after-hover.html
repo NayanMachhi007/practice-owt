@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: blue;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            bottom: -10px;
+            width: 0%;
+           border: 3px solid yellow;
+            background: yellow;
+            transition: 0.8s;
+            overflow: hidden;
+        }
+
+        h1:hover::after {
+            width: 50%; 
+        }
+
+        h1::before{
+            content: '';
+            position: absolute;
+            left:0%;
+            width: 0%;
+            bottom:-10px;
+            border:3px dotted yellow;
+            opacity: 0;
+            transition: 0.8s;
+            overflow: hidden;
+            height: 0;
+        }
+
+        h1:hover::before{
+            width: 100%;
+            opacity: 1;
+        }
+
+
+        
+
+
+        
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <h1>
+        Lorem ipsum
+</body>
+
+</html>

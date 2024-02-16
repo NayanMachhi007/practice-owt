@@ -61,6 +61,10 @@
             width: 25%;
         }
 
+        .heading-1{
+            font-size: 45px;
+        }
+
         .d-flex-align-center-direction-column {
             display: flex;
             justify-content: space-around;
@@ -132,7 +136,7 @@
 
         .mega-nav .navigation-main .navigation li .navigation-details-home {
             position: absolute;
-            bottom: -100%;
+            bottom: -90%;
             left: 0%;
             height: 90vh;
             width: 100%;
@@ -140,6 +144,8 @@
             transition: 0.5s;
             width: 100%;
             padding: 50px;
+            opacity: 0;
+            overflow: hidden;
 
 
         }
@@ -147,6 +153,7 @@
         .mega-nav .navigation-main .navigation li:hover .navigation-details-home {
             bottom: 0%;
             left: 0;
+            opacity: 1;
 
         }
 
@@ -204,6 +211,23 @@
             background-position: right center;
             background-size: cover;
             background-repeat: no-repeat;
+        }
+
+        .banner-details .banner-background .banner-details{
+            position: absolute;
+            top:40%;
+            left:-50%;
+            width: 40%;
+            transition: 2s;
+            background: white;
+            height:30%;
+            padding: 20px;
+            border-radius: 30px;
+
+        }
+
+        .banner-details:hover .banner-background .banner-details{
+            left:10%;
         }
     </style>
 </head>
@@ -482,7 +506,11 @@
 
         <section class="banner-details">
             <div class="banner-background">
-
+                <div class="banner-details">
+                    <h1 class="heading-1">Big Fastival Offers</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum accusantium ad blanditiis quo
+                        alias asperiores quisquam et eum distinctio. Praesentium!</p>
+                </div>
             </div>
         </section>
     </nav>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: beige;
+            height: 100vh;
+        }
+
+
+        h1{
+            color: green;
+            position: relative;
+        }
+
+        h1::before{
+            content: '';
+            position: absolute;
+            width: 10%;
+            height: 3px;
+            background: grey;
+            bottom:0;
+            transition: 0.8s;
+        }
+
+        h1:hover::before{
+            width: 40%;
+        }
+
+        h1::after{
+            content: '';
+            bottom: 0;
+            position: absolute;
+            left: 0;
+            transition: 0.8s;
+            border-bottom: 3px dotted grey;
+            width: 0%;
+            transition: 0.8s;
+        }
+
+        h1:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Lorem Ipsum</h1>
+
+
+</body>
+
+</html>

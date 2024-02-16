@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: blue;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            right:0%;
+            bottom:-10px;
+            width: 20%;
+            height: 3px;
+            background: yellow;
+            transition: 0.8s;
+        }
+
+        h1:hover::after{
+            width: 80%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>
+        Lorem ipsum
+</body>
+
+</html>

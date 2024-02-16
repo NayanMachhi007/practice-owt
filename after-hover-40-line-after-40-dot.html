@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After Hover 40 line and After 40 Dot</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1{
+            color: purple;
+            position: relative;
+        }
+
+        h1::after{
+            content: '';
+            position: absolute;
+            bottom:-10px;
+            left: 0;
+            border-bottom: 2px solid grey;
+            width: 20%;
+            transition: 0.8s;
+            
+        }
+
+        h1:hover::after{
+            width: 40%;
+        }
+
+        h1:hover::after{
+            width: 80%;
+            border-bottom: 2px dotted grey;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>lorem ipsum</h1>
+
+</body>
+</html>

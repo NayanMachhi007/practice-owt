@@ -1,0 +1,19 @@
+.custom-animation {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  .animation-img {
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    transition: 1.2s;
+  }
+
+  &:hover {
+    .animation-img {
+      left: 0%;
+    }
+  }
+}

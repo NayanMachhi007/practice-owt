@@ -1,0 +1,35 @@
+.custom-icon-main {
+  height: 170vh;
+  position: relative;
+
+  .custom-image {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+
+  .custom-icon {
+    background: #f4f2f1;
+    height: 170vh;
+    padding: 120px 180px;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    .custom-icon-des {
+        width: 250px;
+        height: 300px;
+        // border: 1px solid black;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h3{
+        padding:20px 0px;
+      }
+    }
+  }
+}

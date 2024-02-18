@@ -1,0 +1,26 @@
+.simple-intro {
+  height: 50vh;
+  @include d-flex-justfy-center;
+  @include d-flex;
+  @include d-flex-align-center;
+
+  h2 {
+    color: rgb(11, 11, 11);
+    font-size: 47px;
+    width: 70%;
+    text-align: center;
+    font-weight: 400;
+    position:relative;
+
+    &::after {
+      content: "";
+      width: 18%;
+      margin: auto;
+      position: absolute;
+      bottom: -15px;
+      height: 3px;
+      background: #a8987e;
+      right: 42%;
+    }
+  }
+}

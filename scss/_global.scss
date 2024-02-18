@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::after {
+  box-sizing: border-box;
+}
+
+::before {
+  box-sizing: border-box;
+}
+
+@mixin bg-black{
+  background: black;
+}
+
+@mixin bg-white{
+  background: white;
+}
+
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin d-flex-justfy-center {
+  justify-content: center;
+}
+
+@mixin d-flex-align-center {
+  align-items: center;
+}
+
+@mixin container {
+  width: 80%;
+  margin: auto;
+}
+
+@mixin container-fluid {
+  width: 100%;
+}
+
+@mixin row {
+  display: flex;
+}
+@mixin col-11{
+    width: 99.66%;
+}
+
+@mixin col-10 {
+  width: 83.33%;
+}
+
+@mixin col-9{
+    width: 75%;
+}
+
+@mixin col-6{
+  width: 50%;
+}
+
+@mixin col-4 {
+  width: 33.33%;
+}
+
+@mixin col-3 {
+  width: 25%;
+}
+
+@mixin col-2 {
+  width: 16.68%;
+}
+
+@mixin col-1 {
+  width: 8.33%;
+}
+
+@mixin pd-10 {
+  padding: 10px;
+}
+
+@mixin pt-20 {
+  padding-top: 20px;
+}
+
+@mixin ml-40{
+  margin-left: 40px;
+}
+
+@mixin color-black{
+  color: black;
+}
+
+@mixin color-white{
+  color:white;
+}
+
+@mixin primary-btn {
+  padding: 10px 20px;
+  background: #3fdcc8;
+  color: black;
+  text-decoration: none;
+  
+}
+.bg-white{
+  @include bg-white;
+}
+
+.bg-black{
+  @include bg-black;
+}
+
+.d-flex {
+  @include d-flex;
+}
+
+.d-flex-justfy-center {
+  @include d-flex-justfy-center;
+}
+
+.d-flex-align-center{
+    @include d-flex-align-center;
+}
+
+.container {
+  @include container;
+}
+
+.container-fluid {
+  @include container-fluid;
+}
+
+.row {
+  @include row;
+}
+.col-11{
+    @include col-11;
+}
+.col-9{
+    @include col-9;
+}
+
+.col-10 {
+  @include col-10;
+}
+
+.col-6{
+  @include col-6;
+}
+
+.col-4 {
+  @include col-4;
+}
+
+.col-3 {
+  @include col-3;
+}
+
+.col-2 {
+  @include col-2;
+}
+
+.col-1 {
+  @include col-1;
+}
+
+.pd-10 {
+  @include pd-10;
+}
+
+.pt-20 {
+  @include pt-20;
+}
+
+.ml-40{
+  @include ml-40;
+}
+
+.color-black{
+  @include color-black;
+}
+
+.color-white{
+  @include color-white;
+}
+
+.primary-btn {
+  @include primary-btn;
+}

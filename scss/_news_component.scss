@@ -1,0 +1,44 @@
+.news-section {
+  height: 100vh;
+  padding: 100px 20px;
+  h2 {
+    padding: 20px 0;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .news-des-main {
+    height: 500px;
+    width: 260px;
+    text-align: center;
+
+    .news-img {
+      height: 300px;
+      width: 260px;
+      
+      overflow: hidden;
+
+      &:hover {
+        img {transition: 0.8s;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    h3 {
+      padding: 20px 0px;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    h4 {
+      padding: 0px 20px;
+      color: #b99a7e;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.main-nav-bar {
+  // background: black;
+
+  .nav-sticky {
+    // overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+    .logo {
+      img {
+        width: 100px;
+        padding: 5px 5px;
+      }
+    }
+    .navigation {
+      .nav-link {
+        @include d-flex;
+        @include d-flex-align-center;
+        justify-content: end;
+
+        li {
+          padding: 0 30px;
+
+          a {
+            position: relative;
+            padding: 30px 0px;
+            display: inline-block;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 49px;
+              left: 0px;
+              width: 0;
+              height: 5px;
+              background: #a8987e;
+              transition: 0.4s;
+            }
+            &:hover::after {
+              width: 80%;
+            }
+
+            &:hover {
+              color: #a8987e;
+            }
+          }
+
+          .nav-details {
+            z-index: 999;
+            background: url("/images/jet-one/background-banner.jpg");
+
+            position: absolute;
+            bottom: -3%;
+            visibility: hidden;
+            left: 0%;
+            height: 90vh;
+            width: 100%;
+            background: rgb(6, 6, 6);
+            transition: 0.1s;
+            width: 100%;
+            padding: 50px;
+            opacity: 0;
+            overflow: hidden;
+
+            .jet-back-img-mega-nav {
+              position: absolute;
+              top: 100%;
+              transition: 0.8s;
+            }
+
+            .left-txt-short-des-main {
+              position: absolute;
+              width: 500px;
+              height: 200px;
+
+              right: -50%;
+              display: flex;
+              padding: 80px;
+
+              transition: 0.8s;
+
+              .left-txt-des {
+                h3 {
+                  color: #a8987e;
+                  padding: 15px 0px;
+                }
+                p {
+                  color: white;
+                }
+                a {
+                  color: white;
+                }
+              }
+
+              &:hover {
+                img {
+                  transform: scale(1.1);
+                }
+                h3 {
+                  color: white;
+                }
+              }
+            }
+
+            &:hover {
+              .left-txt-short-des-main {
+                right: 15%;
+              }
+            }
+
+            &:hover {
+              .jet-back-img-mega-nav {
+                top: 0%;
+              }
+            }
+          }
+          &:hover {
+            .nav-details {
+              visibility: visible;
+              bottom: 0%;
+              left: 0;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .banner-section {
+      width: 100%;
+      height: 100%;
+      img {
+        object-fit: cover;
+      }
+      }
+    }
+  }

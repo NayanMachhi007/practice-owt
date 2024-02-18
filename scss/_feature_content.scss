@@ -1,0 +1,51 @@
+.feature-content-main {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #f5f3f1;
+  .image {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    right: -50%;
+    transition: 0.8s;
+
+  }
+
+  &:hover {
+    .image {
+      right: 0%;
+    }
+  }
+
+.right-text-feature-content{
+    position: absolute;
+    left:-50%;
+    width: 400px;
+    transition: 0.8s;
+    padding:50px 0;
+    
+
+    h3{
+        font-weight: 500;
+        font-size: 30px;
+        padding:10px;
+    }
+
+    p{
+        padding:10px;
+    }
+
+    a{
+        color: #a8987e;
+        padding: 10px;
+    }
+}
+
+&:hover{
+    .right-text-feature-content{
+        left:10%;
+    }
+}
+
+}

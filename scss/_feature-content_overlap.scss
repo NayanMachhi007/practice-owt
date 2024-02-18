@@ -1,0 +1,54 @@
+.feature-content-image-overlap-main {
+  height: 100vh;
+  background: #dddbd9;
+  position: relative;
+   overflow: hidden;
+   padding: 50px;
+ 
+
+  .feature-left-image {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+   
+    left: -50%;
+    transition: 0.8s;
+     overflow: hidden;
+  }
+
+  &:hover {
+    .feature-left-image {
+      left: 0%;
+       overflow: hidden;
+    }
+  }
+
+  .left-text-feature-content {
+    position: absolute;
+    right: -50%;
+    width: 400px;
+    transition: 0.8s;
+    padding: 50px 0;
+
+    h3 {
+      font-weight: 500;
+      font-size: 30px;
+      padding: 10px;
+    }
+
+    p {
+      padding: 10px;
+    }
+
+    a {
+      color: #a8987e;
+      padding: 10px;
+    }
+  }
+
+  &:hover {
+    .left-text-feature-content {
+      right: 10%;
+    }
+  }
+}

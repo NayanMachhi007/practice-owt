@@ -44,7 +44,7 @@
   }
 
   .footer-secondery {
-    padding: 40px;
+    padding: 40px 0 0 0; 
     .footer-des {
       h4 {
         padding: 20px 0;
@@ -67,6 +67,25 @@
       p {
         
         color: rgb(255, 255, 255);
+      }
+
+      .right-sub-nav{
+        ul{
+            padding: 20px 0px;
+            li{
+                padding: 10px 0px;
+                color: white;
+            }
+        }
+
+        .footer-social-icon{
+            padding: 30px 10px;
+            i{  
+                font-size: 30px;
+                color: white;
+                margin:0 10px;
+            }
+        }
       }
   }
 }

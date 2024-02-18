@@ -516,7 +516,7 @@
   padding: 20px 20px;
 }
 .footer-main .footer-secondery {
-  padding: 40px;
+  padding: 40px 0 0 0;
 }
 .footer-main .footer-secondery .footer-des h4 {
   padding: 20px 0;
@@ -532,6 +532,21 @@
 }
 .footer-main .footer-right-nav p {
   color: rgb(255, 255, 255);
+}
+.footer-main .footer-right-nav .right-sub-nav ul {
+  padding: 20px 0px;
+}
+.footer-main .footer-right-nav .right-sub-nav ul li {
+  padding: 10px 0px;
+  color: white;
+}
+.footer-main .footer-right-nav .right-sub-nav .footer-social-icon {
+  padding: 30px 10px;
+}
+.footer-main .footer-right-nav .right-sub-nav .footer-social-icon i {
+  font-size: 30px;
+  color: white;
+  margin: 0 10px;
 }
 
 * {

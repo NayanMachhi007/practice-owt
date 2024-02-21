@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move circle</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            height: 150px;
+            width: 150px;
+            border: 1px solid black;
+            border-radius: 50%;
+            border-top: 2px solid black;
+            border-right: 2px solid rgb(0, 0, 0);
+            border-bottom: 2px solid yellow;
+            border-left: 2px solid yellow;
+            transform: rotate(45deg);
+        }
+
+        span {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            border-radius: 50%;
+            animation: spain 4s linear infinite;
+        }
+
+
+        @keyframes spain {
+            0% {
+                background-color: rebeccapurple;
+            }
+
+            50% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: rebeccapurple;
+            }
+
+        }
+
+        .box {
+            height: 100%;
+            width: 100%;
+            animation: move 4s linear infinite;
+            transform: rotate(0deg);
+        }
+
+        @keyframes move {
+            form {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box">
+            <span>
+
+            </span>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

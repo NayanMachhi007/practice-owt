@@ -549,6 +549,33 @@
   margin: 0 10px;
 }
 
+.custom-text-move {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-text-move .custom-image {
+  height: 600px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.custom-text-move .custom-image .custom-text-details {
+  position: absolute;
+  top: 39%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  opacity: 0;
+  transition: 0.8s;
+}
+.custom-text-move .custom-image:hover .custom-text-details {
+  left: 100%;
+  opacity: 1;
+}
+
 * {
   margin: 0;
   padding: 0;

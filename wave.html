@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            border: 2px solid green;
+            display: inline-block;
+            margin: 0 20px;
+            animation: move 2s linear infinite;
+        }
+
+        span:nth-child(1) {
+            background: yellow;
+            animation-delay: 0.5s;
+        }
+
+        span:nth-child(2) {
+            background: rgb(41, 157, 55);
+            animation-delay: 1s;
+        }
+
+        span:nth-child(3) {
+            background: yellow;
+             animation-delay: 0.5s;
+        }
+
+        span:nth-child(4) {
+            background: rgb(57, 203, 17);
+            animation-delay: 1s;
+        }
+
+        @keyframes move {
+
+            0% {
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateY(30px);
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+
+            75% {
+                transform: translateY(30px);
+            }
+
+
+
+            100% {
+                transform: translateY(0px);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <span></span><span></span><span></span><span></span>
+    </div>
+
+</body>
+
+</html>

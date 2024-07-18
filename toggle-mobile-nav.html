@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle menu</title>
+    <style>
+        ul {
+            width: 100%;
+            background: green;
+            color: white;
+            display: flex;
+
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        button {
+            display: none;
+        }
+
+        .block {
+            display: block;
+        }
+
+        @media (max-width: 720px) {
+            ul {
+                display: none;
+            }
+
+            button {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="show">Show</button>
+
+    <ul class="ulshow">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact us</li>
+    </ul>
+
+
+
+    <script>
+
+        let btnshow = document.querySelector('.show');
+        btnshow.addEventListener('click', function () {
+            document.querySelector('.ulshow').classList.toggle('block');
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -576,6 +576,25 @@
   opacity: 1;
 }
 
+.demo {
+  height: 100vh;
+  width: 100%;
+}
+.demo .one {
+  background: 0;
+  width: 300px;
+  height: 100px;
+  position: relative;
+}
+.demo .one::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 50px;
+  height: 50px;
+  left: -20%;
+}
+
 * {
   margin: 0;
   padding: 0;

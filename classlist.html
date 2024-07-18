@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion</title>
+
+
+    <style>
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="accordion" onclick="btn(this)">
+        <div class="accordion__title">
+            <h1>Accordion 1</h1>
+        </div>
+
+        <div class="accordion__copy d-none">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis saepe repellat numquam
+                distinctio tempore voluptate porro ab, maiores aspernatur?</p>
+        </div>
+    </div>
+
+    <div class="accordion" onclick="btn(this)">
+        <div class="accordion__title">
+            <h1>Accordion 1</h1>
+        </div>
+
+        <div class="accordion__copy d-none">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis saepe repellat numquam
+                distinctio tempore voluptate porro ab, maiores aspernatur?</p>
+        </div>
+    </div>
+
+
+    <div class="accordion" onclick="btn(this)">
+        <div class="accordion__title">
+            <h1>Accordion 1</h1>
+        </div>
+
+        <div class="accordion__copy d-none">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis saepe repellat numquam
+                distinctio tempore voluptate porro ab, maiores aspernatur?</p>
+        </div>
+    </div>
+
+
+    <div class="accordion" onclick="btn(this)">
+        <div class="accordion__title">
+            <h1>Accordion 1</h1>
+        </div>
+
+        <div class="accordion__copy d-none">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis saepe repellat numquam
+                distinctio tempore voluptate porro ab, maiores aspernatur?</p>
+        </div>
+    </div>
+
+
+    <script>
+        function btn(data){
+            data.children[1].classList.remove("d-none");
+          
+        }
+    </script>
+</body>
+
+</html>

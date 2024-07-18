@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Practice</title>
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        .form-main {
+            width: 100%;
+            padding: 20px 20px;
+ 
+        }
+ 
+        .form-main h2 {
+            font-size: 20px;
+            padding: 20px 0;
+        }
+ 
+        .form-main button {
+            border-radius: 10px;
+            border: none;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            outline: none;
+            cursor: pointer;
+ 
+        }
+ 
+        .form-main .formdetails {
+            padding: 20px;
+            position: absolute;
+            display: none;
+            height: 80vh;
+            width: 30%;
+            border: 1px solid red;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(90deg, rgba(187, 54, 54, 1) 0%, rgba(202, 201, 201, 3) 100%);
+ 
+        }
+ 
+        .form-main .formdetails span {
+ 
+            position: relative;
+            top: -3%;
+            left: 97%;
+            transform: translate(-50%, -50%);
+            color: white;
+            cursor: pointer;
+        }
+ 
+        .form-main .formdetails span::before {
+            left: -8px;
+            content: '';
+            position: absolute;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: red;
+            border-radius: 50%;
+            z-index: -1;
+            top: -5px;
+ 
+        }
+ 
+        .form-main .formdetails table {
+            width: 100%;
+        }
+ 
+        .form-main .formdetails table thead tr td input {
+            width: 100%;
+        }
+ 
+        .form-main .formdetails table thead tr {
+            padding: 20px 0;
+        }
+ 
+        .form-main .formdetails table thead tr td button {
+ 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+ 
+        .form-main .formdetails table thead tr td {
+            border: none;
+        }
+ 
+        .outersection {
+            display: none;
+        }
+ 
+        .outersection table {
+            width: 100%;
+            height: 100%;
+            border: 1px solid red;
+        }
+ 
+        td {
+            text-align: center;
+            border: 1px solid red;
+        }
+ 
+        .actionbtn {
+            padding: 2px 10px;
+            background: red;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <section class="form-main" id="formmain">
+        <h2>Student Details</h2>
+ 
+        <button type="text" onclick="studentinfo()">Add Student</button>
+ 
+ 
+        <div class="formdetails" id="formdetails">
+            <span id="close" onclick="closebtn()"> X </span>
+ 
+            <table>
+                <thead>
+ 
+                    <tr>
+                        <td>Student Name</td>
+                        <td><input type="text" id="studentname" placeholder="studentname"></td>
+ 
+ 
+                    <tr>
+                        <td>Email Address</td>
+                        <td><input type="text" id="emailaddress" placeholder="emailaddress"></td>
+                    </tr>
+ 
+                    <tr>
+                        <td>Contact no</td>
+                        <td><input type="text" id="studentcontact" placeholder="student Contact no"></td>
+                    </tr>
+ 
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text" id="studentaddress" placeholder="emailaddress"></td>
+                    </tr>
+ 
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="text" id="studentpassword" placeholder="password"></td>
+                    </tr>
+ 
+                    <tr>
+                        <td><button type="text" onclick="submitdata()">Submit</button></td>
+ 
+                    </tr>
+                </thead>
+            </table>
+ 
+        </div>
+    </section>
+ 
+ 
+    <div class="outersection" id="outersection">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Student Email Address</th>
+                    <th>Student Contact</th>
+                    <th>Student Address</th>
+                    <th>Student Password</th>
+                    <th>Action</th>
+                </tr>
+ 
+            </thead>
+ 
+            <tbody id="datashow">
+ 
+ 
+            </tbody>
+        </table>
+    </div>
+ 
+ 
+ 
+    <script>
+        function studentinfo() {
+            document.getElementById("formdetails").style.display = "block";
+        }
+ 
+        function submitdata() {
+            let studentname = document.getElementById("studentname").value;
+            let studentemail = document.getElementById("emailaddress").value;
+            let studentcontact = document.getElementById("studentcontact").value;
+            let studentaddress = document.getElementById("studentaddress").value;
+            let studentpassword = document.getElementById("studentpassword").value;
+ 
+            document.getElementById("datashow").innerHTML += "<tr><td> " + studentname + "</td><td> " + studentemail + "</td><td> " + studentcontact + " </td><td> " + studentaddress + " </td><td> " + studentpassword + "</td> <td> <button class='actionbtn'>Details</button> <button class='actionbtn'>Edit</button> <button class='actionbtn'>Delete</button> </td><td></tr>";
+            document.getElementById("formdetails").style.display = "none";
+            document.getElementById("outersection").style.display = "block";
+        }
+ 
+ 
+ 
+        function closebtn() {
+            document.getElementById("formdetails").style.display = "none";
+        }
+    </script>
+</body>
+ 
+</html>

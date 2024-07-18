@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tow name show</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: lightgray;
+            height: 100vh;
+        }
+
+        input {
+            padding: 5px 0;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        button {
+            margin-left: 10px;
+
+        }
+
+        .name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .main {
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .result {
+            display: flex;
+            width: 300px;
+            height: 100px;
+            padding: 10px 0;
+
+        }
+
+        .result-p {
+            padding: 0 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <input type="text" id="first-name">
+        <input type="text" id="last-name">
+        <button id="btn" type="button" onclick="input()">Click Me</button>
+
+
+
+
+        <div class="result">
+            <p class="name">First Name:</p><br>
+            <p id="p-first-name" class="result-p"></p>
+            <p class="name">last Name:</p>
+            <p id="p-last-name" class="result-p"></p>
+        </div>
+    </div>
+
+
+    <script>
+        function input() {
+            document.getElementById("p-first-name").innerHTML = document.getElementById("first-name").value;
+
+            document.getElementById("p-last-name").innerHTML = document.getElementById("last-name").value;
+        }
+
+    </script>
+</body>
+
+</html>

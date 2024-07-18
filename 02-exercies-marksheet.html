@@ -7,6 +7,20 @@
     <title>Marksheet || Exercise 2</title>
 </head>
 
+<style>
+
+    body{
+        background: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    table{
+        border: 1px solid black;
+    }
+</style>
+
 <body>
 
 
@@ -16,38 +30,39 @@
     <script>
 
         let Name = prompt("Please Enter Student Name ");
-        let sub1 = Number(prompt("Please Enter .Net Subject Marks"));
-        let sub2 = Number(prompt("Please Enter Javascript Subject Marks"));
-        // let sub3 =  prompt("Please Enter Java Subject Marks");
-        // let sub4 = prompt("Please Enter Python Subject Marks");
-        // let sub5 = prompt("Please Enter CSS Subject Marks");
-        // let sub6 = prompt("Please Enter HTML Subject Marks");
-        // let sub7 = prompt("Please Enter Oracle Database Subject Marks");
-        // let sub8 = prompt("Please Enter Bootstrap Subject Marks");
-        let sum = Number(sub1) + Number(sub2);
+        let sub1 = parseInt(prompt("Please Enter .Net Subject Marks"));
+        let sub2 = parseInt(prompt("Please Enter Javascript Subject Marks"));
+        let sub3 = parseInt(prompt("Please Enter CSS Subject Marks"));
+        let sum = sub1 + sub2 + sub3;
+        let per = parseFloat(sum / 3);
 
-         document.write("Total : ", sum);
-        //  + Number(sub3) + Number(sub4) + Number(sub5) + Number(sub6) + Number(sub7) + Number(sub8);
-        let per = sum / 8;
+        
 
-
-        document.write(Name);
-        document.write("<h2>Student Name : Nayan</h2>");
-
-        document.write(".Net :",);
-        document.write("Javascript :",);
-        document.write("Java :",);
-        document.write("Python :",);
-        document.write("CSS :",);
-        document.write("HTML :",);
-        document.write("Oracle Database :",);
-        document.write("Bootstrap :",);
+        if (sub1 < 35) {
+            document.write("Fail");
+        }
+        else {
+            document.write("Pass");
+        }
 
 
-       
+        if (sub2 < 35) {
+            document.write("Fail");
+        }
+        else {
+            document.write("Pass");
+        }
 
 
-        document.write("Percentage : ", per);
+        if (sub3 < 35) {
+            document.write("Fail");
+        }
+        else {
+            document.write("Pass");
+        }
+
+        document.write("<table><thead><th><td>Name</td></th></thead></table>", sum);
+
 
 
 
